@@ -1,6 +1,6 @@
 ## Features
 
-- **MCU:** STM32L0 (STM32L051xx) on a custom PCB
+- **MCU:** STM32L0 (STM32L051) on a custom PCB
 - **Very low power** operation using LPTIM and low-frequency clock sources
 - **Multiple PWM generation modes** with EMC in mind:
   - `LowEMI-Stop` – LPTIM clocked from LSE/LSI, MCU in STOP mode, edge-aligned PWM, no dithering
