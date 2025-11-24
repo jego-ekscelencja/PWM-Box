@@ -9,4 +9,3 @@
   - `CA-PRBS` – center-aligned PWM with pseudo-random modulation (PRBS / LFSR) to spread EMI
   - `CA-DMA` – PWM with DMA-driven update (triangle / shaped pattern for spectrum spreading)
   - `AutoTune-Freq` – automatic search for a PWM frequency that minimizes supply current / EMI
-- **Automotive-style use case:**
