@@ -1,0 +1,17 @@
+../Core/Src/main.c:534:13:PwmBox_ConfigureTim2Pwm	10
+../Core/Src/main.c:223:6:SystemClock_Config	4
+../Core/Src/main.c:268:6:HSI_Enable	2
+../Core/Src/main.c:277:6:HSI_Disable	2
+../Core/Src/main.c:286:6:Jumpers_SetModePinsToAnalog	1
+../Core/Src/main.c:296:6:Jumpers_SetFrequencyPinsToAnalog	1
+../Core/Src/main.c:309:6:Jumpers_SetPwmPinsToAnalog	1
+../Core/Src/main.c:318:6:Jumpers_SetEdgePinsToAnalog	1
+../Core/Src/main.c:331:6:RouteOutputToLPTIM	1
+../Core/Src/main.c:353:6:RouteOutputToTIM2	1
+../Core/Src/main.c:375:6:EnterRunMode	1
+../Core/Src/main.c:381:6:EnterSleepMode	1
+../Core/Src/main.c:395:6:EnterStopMode	1
+../Core/Src/main.c:412:6:Edge_SetOutputSlew	6
+../Core/Src/main.c:459:17:PwmBox_ReadJumpers	2
+../Core/Src/main.c:165:5:main	71
+../Core/Src/main.c:1197:6:Error_Handler	1
