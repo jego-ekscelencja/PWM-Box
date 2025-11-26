@@ -383,16 +383,12 @@ void EnterSleepMode(void) {
 }
 
 void EnterStopMode(void) {
-	/*  Tryb STOP:
-	 *  - CPU i większość zegarów OFF
-	 *  - działa LSI/LSE, wybrane peryferia low-power - LPTIM
-	 *  - wymagane ponowne ustawienie zegarów po wyjściu */
 
 	// Zatrzymaj SysTick
 	HAL_SuspendTick();
-	// Wejście w STOP z low-power regulatorem,
+	// Wejście w STOP z lowpower regulatorem,
 	HAL_PWR_EnterSTOPMode(PWR_LOWPOWERREGULATOR_ON, PWR_STOPENTRY_WFI);
-	/* Po wybudzeniu wracamy tutaj – zegary są w stanie resetowym (MSI domyślnie),
+	/* Po wybudzeniu wracamy tutaj zegary są w stanie resetowym (MSI domyślnie),
 	 * więc trzeba przywrócić konfigurację systemowego zegara.*/
 
 	SystemClock_Config();
@@ -405,7 +401,7 @@ void Edge_SetOutputSlew(EdgeOutput_t output, EdgeSlew_t slew) {
 	uint16_t pin;
 	uint32_t alternate;
 
-	// Wybór pinu i funkcji alternatywnej w zależności od wyjścia
+
 	switch (output) {
 	case EDGE_OUTPUT_TIM2_CH3:
 		port = GPIOA;
