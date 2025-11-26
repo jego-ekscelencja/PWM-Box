@@ -1025,19 +1025,18 @@ static void Mode_AutoTuneFreq(const PwmBoxJumpers_t *cfg) {
 			++i) {
 		float test_freq = base_freq_hz * (1.0f + rel_offsets[i]);
 
-		/* Nie schodzimy poniżej progu, żeby nie czekać wieki na ustalenie się układu */
+	
 		if (test_freq < 10.0f) {
 			test_freq = 10.0f;
 		}
 
-		/* Przestrojenie TIM2 na nową częstotliwość przy tym samym wypełnieniu */
+		// Przestrojenie TIM2 na nową częstotliwość 
 		PwmBox_ConfigureTim2Pwm(test_freq, duty);
 
-		/* Krótka pauza, żeby filtr/obciążenie złapały nowy stan.
-		 * Przy f rzędu setek Hz 5–10 ms to kilka-kilkanaście okresów. */
+	 */
 		HAL_Delay(10);
 
-		/* Prosta metryka „szumu”: rozpiętość max–min na ISENSE */
+		/*  metryka szumu rozpiętość max–min na ISENSE */
 		uint32_t span = ISense_MeasureSpan(sample_count);
 
 		if (span < best_metric) {
